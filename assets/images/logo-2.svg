@@ -1,0 +1,26 @@
+<svg width="280" height="64" viewBox="0 0 280 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pBadgeGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#E5A800" />
+    </linearGradient>
+    <linearGradient id="glowGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Parking Shield Icon -->
+  <rect x="4" y="6" width="52" height="52" rx="14" fill="url(#pBadgeGrad2)" />
+  <rect x="4" y="6" width="52" height="26" rx="14" fill="url(#glowGrad2)" />
+  
+  <!-- Stylized "P" -->
+  <path d="M22 45V19H34C38.4 19 41.5 22.1 41.5 26.5C41.5 30.9 38.4 34 34 34H28.5V45H22ZM28.5 28.5H33.5C35.2 28.5 36.5 27.6 36.5 26.5C36.5 25.4 35.2 24.5 33.5 24.5H28.5V28.5Z" fill="#1A222D" />
+  
+  <!-- Mini Signal dot -->
+  <circle cx="46" cy="14" r="3.5" fill="#10B981" />
+
+  <!-- Logo Typography for Sticky Light Navbar -->
+  <text x="68" y="37" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="800" font-size="28" fill="#1F2A38" letter-spacing="1">LE <tspan fill="#EEC41E">PETIT</tspan></text>
+  <text x="69" y="51" font-family="'Poppins', 'Segoe UI', sans-serif" font-weight="600" font-size="9" fill="#747E88" letter-spacing="2.2">SMART PARKING &amp; EV HUB</text>
+</svg>
