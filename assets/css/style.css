@@ -1025,92 +1025,298 @@ p {
 }
 
 /*===========================
-     04.DESTINATION css 
+     04.DESTINATION / RATES & PACKAGES css 
 ===========================*/
 .destination_area {
-  background-color: #F9FAFB;
-}
-
-.single_destination .destination_image img {
-  width: 100%;
-}
-
-.single_destination .destination_content {
-  background-color: #fff;
-  padding: 25px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(173, 206, 243, 0.2);
-  box-shadow: 0px 0px 15px 0px rgba(173, 206, 243, 0.2);
+  background-color: #F8FAFC;
   position: relative;
 }
 
-.single_destination .destination_content .main-btn {
-  font-size: 14px;
-  padding: 0 15px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 50px;
-  background-color: #fff;
-  color: #38424D;
-  -webkit-box-shadow: 0px 3px 30px 0px rgba(173, 206, 243, 0.66);
-  box-shadow: 0px 3px 30px 0px rgba(173, 206, 243, 0.66);
+.single_destination {
+  background-color: #ffffff;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 30px);
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Featured / Popular Card default state */
+.single_destination.featured_package {
+  border: 2px solid #EEC41E;
+  box-shadow: 0 12px 30px rgba(238, 196, 30, 0.15);
+}
+
+/* Card Header & Icon Area */
+.single_destination .destination_image {
+  position: relative;
+  height: 150px;
+  background: linear-gradient(135deg, #F8FAFC 0%, #EDF2F7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #EDF2F7;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.single_destination .destination_image .dest_icon_circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1A222D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  border: 2px solid #E2E8F0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Plan Badges */
+.single_destination .badge_popular {
   position: absolute;
-  right: 25px;
-  top: -18px;
+  top: 14px;
+  left: 14px;
+  background: #EEC41E;
+  color: #121926;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(238, 196, 30, 0.35);
+  z-index: 2;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.single_destination .badge_tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #E2E8F0;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Card Content Body */
+.single_destination .destination_content {
+  background-color: transparent;
+  padding: 26px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.single_destination .destination_content .title {
+  margin-bottom: 6px;
 }
 
 .single_destination .destination_content .title a {
   font-size: 20px;
-  font-weight: 500;
-  color: #38424D;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  font-weight: 700;
+  color: #1A222D;
+  -webkit-transition: color 0.35s ease;
+  transition: color 0.35s ease;
 }
 
-@media (max-width: 767px) {
-  .single_destination .destination_content .title a {
-    font-size: 18px;
-  }
+.single_destination .destination_content .plan_tagline {
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 14px;
+  line-height: 1.4;
+  -webkit-transition: color 0.35s ease;
+  transition: color 0.35s ease;
 }
 
 .single_destination .destination_content .price {
-  font-size: 16px;
-  margin-top: 10px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1A222D;
+  margin-bottom: 18px;
+  line-height: 1.1;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  -webkit-transition: color 0.35s ease;
+  transition: color 0.35s ease;
 }
 
-.single_destination .destination_content .more {
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
+.single_destination .destination_content .price .currency {
+  color: #EEC41E;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.single_destination .destination_content .price .period {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748B;
+  -webkit-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+}
+
+/* Package Features */
+.single_destination .package_features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  flex-grow: 1;
+}
+
+.single_destination .package_features li {
+  font-size: 13.5px;
+  color: #475569;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px dashed #E2E8F0;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.single_destination .package_features li:last-child {
+  border-bottom: none;
+}
+
+.single_destination .package_features li i {
+  color: #10B981;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+  -webkit-transition: color 0.35s ease;
+  transition: color 0.35s ease;
+}
+
+/* Card Button */
+.single_destination .package_btn {
+  width: 100%;
+  height: 44px;
+  line-height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background-color: #1A222D;
+  color: #ffffff;
+  border: 2px solid #1A222D;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   text-align: center;
-  background-color: #EEC41E;
-  color: #fff;
-  border-radius: 50%;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
+  margin-top: auto;
+  box-shadow: 0 4px 12px rgba(26, 34, 45, 0.15);
+  -webkit-transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.single_destination:hover .destination_content {
+.single_destination.featured_package .package_btn {
   background-color: #EEC41E;
+  color: #121926;
+  border-color: #EEC41E;
+}
+
+/*======================================================
+  OPPOSITE / INVERTED COLOR HOVER EFFECT
+======================================================*/
+.single_destination:hover {
+  background-color: #121A24 !important;
+  border-color: #EEC41E !important;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45), 0 0 25px rgba(238, 196, 30, 0.25) !important;
+  -webkit-transform: translateY(-9px);
+  transform: translateY(-9px);
+}
+
+.single_destination:hover .destination_image {
+  background: #0D131B !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.single_destination:hover .destination_image .dest_icon_circle {
+  background: #EEC41E !important;
+  color: #121A24 !important;
+  border-color: #EEC41E !important;
+  box-shadow: 0 0 20px rgba(238, 196, 30, 0.55) !important;
+  -webkit-transform: scale(1.12);
+  transform: scale(1.12);
+}
+
+.single_destination:hover .badge_tag {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
 }
 
 .single_destination:hover .destination_content .title a {
-  color: #fff;
+  color: #ffffff !important;
+}
+
+.single_destination:hover .destination_content .plan_tagline {
+  color: rgba(255, 255, 255, 0.72) !important;
 }
 
 .single_destination:hover .destination_content .price {
-  color: #fff;
+  color: #EEC41E !important;
 }
 
-.single_destination:hover .destination_content .more {
-  color: #EEC41E;
-  background-color: #fff;
+.single_destination:hover .destination_content .price .currency {
+  color: #EEC41E !important;
+}
+
+.single_destination:hover .destination_content .price .period {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.single_destination:hover .package_features li {
+  color: rgba(255, 255, 255, 0.92) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.single_destination:hover .package_features li i {
+  color: #EEC41E !important;
+}
+
+.single_destination:hover .package_btn {
+  background-color: #EEC41E !important;
+  color: #121926 !important;
+  border-color: #EEC41E !important;
+  box-shadow: 0 6px 20px rgba(238, 196, 30, 0.45) !important;
+  font-weight: 700 !important;
+}
+
+.single_destination:hover .package_btn:hover {
+  background-color: #ffffff !important;
+  color: #121926 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Backwards compatibility helper */
+.single_destination .destination_content .more {
+  display: none;
 }
 
 /*===========================
@@ -2056,44 +2262,149 @@ p {
   font-weight: 700;
 }
 
-/* Rates & Packages Badges */
-.single_destination .badge_popular {
+/*==================================================
+   7 SMART PARKING SYSTEMS SHOWCASE
+==================================================*/
+.systems_area {
+  background-color: #F8F9FA;
+  position: relative;
+}
+
+.single_system_card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #EAEFF5;
+  transition: all 0.35s ease;
+  height: calc(100% - 30px);
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.single_system_card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  border-color: #EEC41E;
+}
+
+.single_system_card.featured_system {
+  border: 2px solid #EEC41E;
+}
+
+.system_image_wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: #1F2A38;
+}
+
+.system_image_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.single_system_card:hover .system_image_wrapper img {
+  transform: scale(1.08);
+}
+
+.system_num_badge {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 14px;
+  left: 14px;
   background: #EEC41E;
   color: #1a222d;
+  font-weight: 800;
   font-size: 11px;
-  font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(238, 196, 30, 0.4);
   z-index: 2;
 }
-.single_destination .package_features {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0 20px;
-}
-.single_destination .package_features li {
-  font-size: 13px;
-  color: #747E88;
-  padding: 4px 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.single_destination .package_features li i {
-  color: #EEC41E;
-  font-size: 13px;
-}
-.single_destination:hover .package_features li {
-  color: rgba(255, 255, 255, 0.95);
-}
-.single_destination:hover .package_features li i {
+
+.system_capacity_tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(18, 25, 38, 0.85);
   color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
+
+.system_content {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.system_content .system_title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #2D3748;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.system_content .system_desc {
+  font-size: 13.5px;
+  color: #747E88;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.system_specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.system_spec_tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  background: #F1F5F9;
+  color: #475569;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.system_spec_tag i {
+  color: #EEC41E;
+  font-size: 12px;
+}
+
+.system_content .main-btn {
+  width: 100%;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.system_content .main-btn:hover {
+  background: #1a222d;
+  color: #EEC41E;
+}
+
 
 /* Interactive Slot Map */
 .slot_map_area {
