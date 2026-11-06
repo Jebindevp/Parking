@@ -19,6 +19,18 @@ $(function() {
         setTimeout(hidePreloader, 1500);
     }
     
+    //===== Ensure Hero Background Video Autoplays Smoothly
+    var heroVideo = document.querySelector('.hero_bg_video');
+    if (heroVideo) {
+        heroVideo.muted = true;
+        var playPromise = heroVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function () {
+                // Autoplay policy handled gracefully
+            });
+        }
+    }
+    
     
     //===== Sticky Navbar
 

@@ -90,16 +90,16 @@
                                         <a class="page-scroll" href="#about">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#packages">Rates &amp; Passes</a>
+                                        <a class="page-scroll" href="#packages">Rates</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#services">Services</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#slotmap">Live Slot Map</a>
+                                        <a class="page-scroll" href="#slotmap"> Map</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#how-it-works">How It Works</a>
+                                        <a class="page-scroll" href="#how-it-works">Works</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#testimonial">Reviews</a>
@@ -127,8 +127,15 @@
         </div> <!-- header navbar -->
 
         <div id="home" class="header_slider">
-            <div class="single_slider bg_cover d-block d-lg-flex align-items-center"
-                style="background-image: linear-gradient(rgba(18, 25, 38, 0.78), rgba(18, 25, 38, 0.88)), url(assets/images/hero-area.jpg)">
+            <div class="single_slider d-block d-lg-flex align-items-center">
+                <!-- Responsive Background Video -->
+                <video class="hero_bg_video" autoplay muted loop playsinline webkit-playsinline poster="assets/images/hero-area.jpg">
+                    <source src="assets/images/car1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Dark Gradient Overlay for optimal readability -->
+                <div class="hero_video_overlay"></div>
+
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-7 col-md-10">
@@ -188,11 +195,11 @@
                                     <div class="col-sm-6 mb-3">
                                         <label><i class="lni lni-timer mr-1"></i> Duration</label>
                                         <select id="quickDuration" class="form-control">
-                                            <option value="2">2 Hours ($7.00)</option>
-                                            <option value="4">4 Hours ($14.00)</option>
-                                            <option value="8">8 Hours / Full Day ($22.00)</option>
-                                            <option value="weekend">Weekend Pass ($38.00)</option>
-                                            <option value="weekly">Weekly Airport Bay ($79.00)</option>
+                                            <option value="2">2 Hours (₹80)</option>
+                                            <option value="4">4 Hours (₹150)</option>
+                                            <option value="8">8 Hours / Full Day (₹250)</option>
+                                            <option value="weekend">Weekend Pass (₹499)</option>
+                                            <option value="weekly">Weekly Airport Bay (₹1,499)</option>
                                         </select>
                                     </div>
                                     <div class="col-12">
@@ -324,9 +331,9 @@
                         </div>
                         <div class="destination_content">
                             <a href="#contact" class="main-btn page-scroll"
-                                onclick="selectPlan('Hourly Short-Stay', 3.50)">Book</a>
+                                onclick="selectPlan('Hourly Short-Stay', 40)">Book</a>
                             <h4 class="title"><a href="javascript:void(0)">Hourly Short-Stay</a></h4>
-                            <p class="price" style="font-weight: 700; color: #EEC41E; font-size: 20px;">$3.50 <span
+                            <p class="price" style="font-weight: 700; color: #EEC41E; font-size: 20px;">₹40 <span
                                     style="font-size: 13px; font-weight: normal; color: #747E88;">/ hour</span></p>
 
                             <ul class="package_features">
@@ -336,7 +343,7 @@
                                 <li><i class="lni lni-checkmark"></i> Ground floor easy-access bays</li>
                             </ul>
                             <a href="#contact" class="more page-scroll"
-                                onclick="selectPlan('Hourly Short-Stay', 3.50)"><i class="lni lni-arrow-right"></i></a>
+                                onclick="selectPlan('Hourly Short-Stay', 40)"><i class="lni lni-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -354,9 +361,9 @@
                         </div>
                         <div class="destination_content">
                             <a href="#contact" class="main-btn page-scroll"
-                                onclick="selectPlan('Daily Explorer Pass', 22.00)">Book</a>
+                                onclick="selectPlan('Daily Commuter Pass', 250)">Book</a>
                             <h4 class="title"><a href="javascript:void(0)">Daily Commuter Pass</a></h4>
-                            <p class="price" style="font-weight: 700; color: #EEC41E; font-size: 20px;">$22.00 <span
+                            <p class="price" style="font-weight: 700; color: #EEC41E; font-size: 20px;">₹250 <span
                                     style="font-size: 13px; font-weight: normal; color: #747E88;">/ full day</span></p>
 
                             <ul class="package_features">
@@ -366,7 +373,7 @@
                                 <li><i class="lni lni-checkmark"></i> Free emergency battery boost</li>
                             </ul>
                             <a href="#contact" class="more page-scroll"
-                                onclick="selectPlan('Daily Explorer Pass', 22.00)"><i
+                                onclick="selectPlan('Daily Commuter Pass', 250)"><i
                                     class="lni lni-arrow-right"></i></a>
                         </div>
                     </div>
@@ -383,9 +390,9 @@
                         </div>
                         <div class="destination_content">
                             <a href="#contact" class="main-btn page-scroll"
-                                onclick="selectPlan('Airport Long-Stay Bay', 14.00)">Book</a>
+                                onclick="selectPlan('Airport Long-Stay Bay', 199)">Book</a>
                             <h4 class="title"><a href="javascript:void(0)">Airport Long-Stay</a></h4>
-                            <p class="price" style="font-weight: 700; color: #EEC41E; font-size: 20px;">$14.00 <span
+                            <p class="price" style="font-weight: 700; color: #EEC41E; font-size: 20px;">₹199 <span
                                     style="font-size: 13px; font-weight: normal; color: #747E88;">/ day (3+ days)</span>
                             </p>
 
@@ -396,7 +403,7 @@
                                 <li><i class="lni lni-checkmark"></i> Flight delay buffer guarantee</li>
                             </ul>
                             <a href="#contact" class="more page-scroll"
-                                onclick="selectPlan('Airport Long-Stay Bay', 14.00)"><i
+                                onclick="selectPlan('Airport Long-Stay Bay', 199)"><i
                                     class="lni lni-arrow-right"></i></a>
                         </div>
                     </div>
@@ -413,9 +420,9 @@
                         </div>
                         <div class="destination_content">
                             <a href="#contact" class="main-btn page-scroll"
-                                onclick="selectPlan('Monthly VIP & EV Executive', 185.00)">Book</a>
+                                onclick="selectPlan('Monthly VIP & EV Executive', 2499)">Book</a>
                             <h4 class="title"><a href="javascript:void(0)">Monthly VIP &amp; EV</a></h4>
-                            <p class="price" style="font-weight: 700; color: #EEC41E; font-size: 20px;">$185.00 <span
+                            <p class="price" style="font-weight: 700; color: #EEC41E; font-size: 20px;">₹2,499 <span
                                     style="font-size: 13px; font-weight: normal; color: #747E88;">/ month</span></p>
 
                             <ul class="package_features">
@@ -425,7 +432,7 @@
                                 <li><i class="lni lni-checkmark"></i> Priority valet &amp; concierge service</li>
                             </ul>
                             <a href="#contact" class="more page-scroll"
-                                onclick="selectPlan('Monthly VIP & EV Executive', 185.00)"><i
+                                onclick="selectPlan('Monthly VIP & EV Executive', 2499)"><i
                                     class="lni lni-arrow-right"></i></a>
                         </div>
                     </div>
@@ -613,7 +620,7 @@
                         <div class="parking_bays_grid" id="baysGrid">
                             <!-- Slot items generated interactively -->
                             <div class="bay_slot avail"
-                                onclick="selectSlot('Bay A-01', 'Ground Floor Standard', 3.50, this)">
+                                onclick="selectSlot('Bay A-01', 'Ground Floor Standard', 40, this)">
                                 <span class="bay_number">A-01</span>
                                 <i class="lni lni-car bay_icon"></i>
                                 <span class="bay_status_text">Avail</span>
@@ -624,13 +631,13 @@
                                 <span class="bay_status_text">Busy</span>
                             </div>
                             <div class="bay_slot avail selected"
-                                onclick="selectSlot('Bay A-03', 'Ground Floor Standard', 3.50, this)">
+                                onclick="selectSlot('Bay A-03', 'Ground Floor Standard', 40, this)">
                                 <span class="bay_number">A-03</span>
                                 <i class="lni lni-car bay_icon"></i>
                                 <span class="bay_status_text">Avail</span>
                             </div>
                             <div class="bay_slot ev"
-                                onclick="selectSlot('Bay EV-01', 'EV Fast Charging Bay', 5.00, this)">
+                                onclick="selectSlot('Bay EV-01', 'EV Fast Charging Bay', 65, this)">
                                 <span class="bay_number">EV-01</span>
                                 <i class="lni lni-bolt bay_icon"></i>
                                 <span class="bay_status_text">EV Bay</span>
@@ -641,19 +648,19 @@
                                 <span class="bay_status_text">Busy</span>
                             </div>
                             <div class="bay_slot avail"
-                                onclick="selectSlot('Bay A-05', 'Ground Floor Standard', 3.50, this)">
+                                onclick="selectSlot('Bay A-05', 'Ground Floor Standard', 40, this)">
                                 <span class="bay_number">A-05</span>
                                 <i class="lni lni-car bay_icon"></i>
                                 <span class="bay_status_text">Avail</span>
                             </div>
                             <div class="bay_slot vip"
-                                onclick="selectSlot('Bay VIP-01', 'Executive VIP Bay', 6.00, this)">
+                                onclick="selectSlot('Bay VIP-01', 'Executive VIP Bay', 80, this)">
                                 <span class="bay_number">VIP-01</span>
                                 <i class="lni lni-star-filled bay_icon"></i>
                                 <span class="bay_status_text">VIP</span>
                             </div>
                             <div class="bay_slot avail"
-                                onclick="selectSlot('Bay A-06', 'Ground Floor Standard', 3.50, this)">
+                                onclick="selectSlot('Bay A-06', 'Ground Floor Standard', 40, this)">
                                 <span class="bay_number">A-06</span>
                                 <i class="lni lni-car bay_icon"></i>
                                 <span class="bay_status_text">Avail</span>
@@ -664,19 +671,19 @@
                                 <span class="bay_status_text">Busy</span>
                             </div>
                             <div class="bay_slot ev"
-                                onclick="selectSlot('Bay EV-02', 'EV Fast Charging Bay', 5.00, this)">
+                                onclick="selectSlot('Bay EV-02', 'EV Fast Charging Bay', 65, this)">
                                 <span class="bay_number">EV-02</span>
                                 <i class="lni lni-bolt bay_icon"></i>
                                 <span class="bay_status_text">EV Bay</span>
                             </div>
                             <div class="bay_slot avail"
-                                onclick="selectSlot('Bay A-08', 'Ground Floor Standard', 3.50, this)">
+                                onclick="selectSlot('Bay A-08', 'Ground Floor Standard', 40, this)">
                                 <span class="bay_number">A-08</span>
                                 <i class="lni lni-car bay_icon"></i>
                                 <span class="bay_status_text">Avail</span>
                             </div>
                             <div class="bay_slot avail"
-                                onclick="selectSlot('Bay A-09', 'Ground Floor Standard', 3.50, this)">
+                                onclick="selectSlot('Bay A-09', 'Ground Floor Standard', 40, this)">
                                 <span class="bay_number">A-09</span>
                                 <i class="lni lni-car bay_icon"></i>
                                 <span class="bay_status_text">Avail</span>
@@ -687,19 +694,19 @@
                                 <span class="bay_status_text">Busy</span>
                             </div>
                             <div class="bay_slot avail"
-                                onclick="selectSlot('Bay A-11', 'Ground Floor Standard', 3.50, this)">
+                                onclick="selectSlot('Bay A-11', 'Ground Floor Standard', 40, this)">
                                 <span class="bay_number">A-11</span>
                                 <i class="lni lni-car bay_icon"></i>
                                 <span class="bay_status_text">Avail</span>
                             </div>
                             <div class="bay_slot vip"
-                                onclick="selectSlot('Bay VIP-02', 'Executive VIP Bay', 6.00, this)">
+                                onclick="selectSlot('Bay VIP-02', 'Executive VIP Bay', 80, this)">
                                 <span class="bay_number">VIP-02</span>
                                 <i class="lni lni-star-filled bay_icon"></i>
                                 <span class="bay_status_text">VIP</span>
                             </div>
                             <div class="bay_slot avail"
-                                onclick="selectSlot('Bay A-12', 'Ground Floor Standard', 3.50, this)">
+                                onclick="selectSlot('Bay A-12', 'Ground Floor Standard', 40, this)">
                                 <span class="bay_number">A-12</span>
                                 <i class="lni lni-car bay_icon"></i>
                                 <span class="bay_status_text">Avail</span>
@@ -714,7 +721,7 @@
                             </div>
                             <div>
                                 <span class="info_label">Estimated Rate:</span>
-                                <span class="info_val ml-2" id="selectedBayRateDisplay">$3.50 / hr</span>
+                                <span class="info_val ml-2" id="selectedBayRateDisplay">₹40 / hr</span>
                             </div>
                             <div>
                                 <a href="#contact" class="main-btn page-scroll"
@@ -1019,10 +1026,10 @@
                                     style="font-size:12px; font-weight:600; color:#556270; text-transform:uppercase;">Vehicle
                                     Category</label>
                                 <select id="bookCategory" onchange="calculateReservationCost()">
-                                    <option value="car">Standard Sedan / Hatchback</option>
-                                    <option value="suv">SUV / Crossover / 4x4 (+$1/hr)</option>
-                                    <option value="ev">Electric Vehicle (EV + Fast Charger) (+$2/hr)</option>
-                                    <option value="bike">Motorcycle / Two-Wheeler (-$1.50/hr)</option>
+                                    <option value="car">Standard Sedan / Hatchback (Base Rate)</option>
+                                    <option value="suv">SUV / Crossover / 4x4 (+₹15/hr)</option>
+                                    <option value="ev">Electric Vehicle (EV + Fast Charger) (+₹25/hr)</option>
+                                    <option value="bike">Motorcycle / Two-Wheeler (-₹20/hr)</option>
                                 </select>
                             </div>
                         </div>
@@ -1085,17 +1092,17 @@
                                     <label class="amenity_checkbox_card">
                                         <input type="checkbox" id="addonEvCharge" onchange="calculateReservationCost()">
                                         <span><i class="lni lni-bolt text-warning mr-1"></i> Add 60kW EV Fast Charge
-                                            (+$10.00)</span>
+                                            (+₹150)</span>
                                     </label>
                                     <label class="amenity_checkbox_card">
                                         <input type="checkbox" id="addonValet" onchange="calculateReservationCost()">
                                         <span><i class="lni lni-car-alt text-warning mr-1"></i> Executive Valet Park
-                                            &amp; Retrieve (+$8.00)</span>
+                                            &amp; Retrieve (+₹100)</span>
                                     </label>
                                     <label class="amenity_checkbox_card">
                                         <input type="checkbox" id="addonWash" onchange="calculateReservationCost()">
                                         <span><i class="lni lni-dashboard text-warning mr-1"></i> Eco Steam Exterior Car
-                                            Wash (+$16.00)</span>
+                                            Wash (+₹250)</span>
                                     </label>
                                 </div>
                             </div>
@@ -1117,7 +1124,7 @@
                             <div class="pricing_summary_box">
                                 <div class="pricing_summary_row">
                                     <span>Base Parking Rate:</span>
-                                    <span id="summaryBaseRate">$3.50 / hr</span>
+                                    <span id="summaryBaseRate">₹40 / hr</span>
                                 </div>
                                 <div class="pricing_summary_row">
                                     <span>Selected Duration:</span>
@@ -1125,11 +1132,11 @@
                                 </div>
                                 <div class="pricing_summary_row">
                                     <span>Amenities &amp; Surcharges:</span>
-                                    <span id="summaryAddons">$0.00</span>
+                                    <span id="summaryAddons">₹0</span>
                                 </div>
                                 <div class="pricing_summary_row total">
                                     <span>Total Estimated Amount:</span>
-                                    <span class="cost_amount" id="summaryTotalCost">$7.00</span>
+                                    <span class="cost_amount" id="summaryTotalCost">₹80</span>
                                 </div>
                             </div>
                         </div>
@@ -1380,7 +1387,7 @@
         function selectPlan(planName, basePrice) {
             var notes = document.getElementById('bookNotes');
             if (notes) {
-                notes.value = 'Selected Package: ' + planName + ' ($' + basePrice.toFixed(2) + ')';
+                notes.value = 'Selected Package: ' + planName + ' (₹' + basePrice.toLocaleString('en-IN') + ')';
             }
             var durSelect = document.getElementById('bookDurationHours');
             var facSelect = document.getElementById('bookFacility');
@@ -1428,7 +1435,7 @@
             }
             var selRateDisplay = document.getElementById('selectedBayRateDisplay');
             if (selRateDisplay) {
-                selRateDisplay.innerText = '$' + rate.toFixed(2) + ' / hr';
+                selRateDisplay.innerText = '₹' + rate + ' / hr';
             }
 
             var bayInput = document.getElementById('bookBayInput');
@@ -1488,7 +1495,7 @@
                 var firstCode = firstAvail.querySelector('.bay_number').innerText;
                 var displayBay = 'Bay ' + firstCode;
                 var bayType = firstAvail.classList.contains('ev') ? 'EV Supercharge Bay' : (firstAvail.classList.contains('vip') ? 'VIP Deck' : floorName);
-                var rate = firstAvail.classList.contains('ev') ? 5.00 : (firstAvail.classList.contains('vip') ? 6.00 : 3.50);
+                var rate = firstAvail.classList.contains('ev') ? 65 : (firstAvail.classList.contains('vip') ? 80 : 40);
 
                 var selBayDisplay = document.getElementById('selectedBayDisplay');
                 if (selBayDisplay) {
@@ -1496,7 +1503,7 @@
                 }
                 var selRateDisplay = document.getElementById('selectedBayRateDisplay');
                 if (selRateDisplay) {
-                    selRateDisplay.innerText = '$' + rate.toFixed(2) + ' / hr';
+                    selRateDisplay.innerText = '₹' + rate + ' / hr';
                 }
                 var bayInput = document.getElementById('bookBayInput');
                 if (bayInput) {
@@ -1513,39 +1520,39 @@
             var durationInput = document.getElementById('bookDurationHours');
             var duration = durationInput ? parseInt(durationInput.value, 10) : 2;
 
-            var baseRate = 3.50;
-            if (facility === 'chennai') baseRate = 4.00;
-            if (facility === 'coimbatore') baseRate = 3.50;
-            if (facility === 'nagercoil') baseRate = 3.00;
+            var baseRate = 40;
+            if (facility === 'chennai') baseRate = 50;
+            if (facility === 'coimbatore') baseRate = 40;
+            if (facility === 'nagercoil') baseRate = 30;
 
             var catMultiplier = 0;
-            if (category === 'suv') catMultiplier = 1.00;
-            if (category === 'ev') catMultiplier = 2.00;
-            if (category === 'bike') catMultiplier = -1.50;
+            if (category === 'suv') catMultiplier = 15;
+            if (category === 'ev') catMultiplier = 25;
+            if (category === 'bike') catMultiplier = -20;
 
-            var hourlyCost = Math.max(1.50, baseRate + catMultiplier);
+            var hourlyCost = Math.max(15, baseRate + catMultiplier);
             var parkingTotal = 0;
             var durationLabel = duration + ' Hours';
 
-            // Flat special pricing tiers
+            // Flat special pricing tiers (in Indian Rupees)
             if (duration === 8) {
-                parkingTotal = 22.00;
+                parkingTotal = 250;
                 durationLabel = '8 Hours (Full Day Shift Pass)';
             } else if (duration === 24) {
-                parkingTotal = 22.00;
+                parkingTotal = 250;
                 durationLabel = '24 Hours (Full Day Pass)';
             } else if (duration === 48) {
-                parkingTotal = 38.00;
+                parkingTotal = 499;
                 durationLabel = '48 Hours (Weekend Pass)';
             } else if (duration === 72) {
-                parkingTotal = 42.00;
+                parkingTotal = 597;
                 durationLabel = '72 Hours (3-Day Airport Pass)';
             } else if (duration === 720) {
-                parkingTotal = 185.00;
+                parkingTotal = 2499;
                 durationLabel = '30 Days (Monthly VIP & EV Pass)';
             } else if (duration > 24) {
                 var days = Math.ceil(duration / 24);
-                parkingTotal = days * 22.00;
+                parkingTotal = days * 250;
                 durationLabel = days + ' Days (' + duration + ' Hours)';
             } else {
                 parkingTotal = hourlyCost * duration;
@@ -1553,28 +1560,28 @@
 
             var addonsTotal = 0;
             if (document.getElementById('addonEvCharge') && document.getElementById('addonEvCharge').checked) {
-                addonsTotal += 10.00;
+                addonsTotal += 150;
             }
             if (document.getElementById('addonValet') && document.getElementById('addonValet').checked) {
-                addonsTotal += 8.00;
+                addonsTotal += 100;
             }
             if (document.getElementById('addonWash') && document.getElementById('addonWash').checked) {
-                addonsTotal += 16.00;
+                addonsTotal += 250;
             }
 
             var grandTotal = parkingTotal + addonsTotal;
 
             if (document.getElementById('summaryBaseRate')) {
-                document.getElementById('summaryBaseRate').innerText = '$' + hourlyCost.toFixed(2) + ' / hr';
+                document.getElementById('summaryBaseRate').innerText = '₹' + hourlyCost + ' / hr';
             }
             if (document.getElementById('summaryDuration')) {
                 document.getElementById('summaryDuration').innerText = durationLabel;
             }
             if (document.getElementById('summaryAddons')) {
-                document.getElementById('summaryAddons').innerText = '$' + addonsTotal.toFixed(2);
+                document.getElementById('summaryAddons').innerText = '₹' + addonsTotal.toLocaleString('en-IN');
             }
             if (document.getElementById('summaryTotalCost')) {
-                document.getElementById('summaryTotalCost').innerText = '$' + grandTotal.toFixed(2);
+                document.getElementById('summaryTotalCost').innerText = '₹' + grandTotal.toLocaleString('en-IN');
             }
         }
 
@@ -1584,7 +1591,7 @@
             var name = document.getElementById('bookDriverName') ? document.getElementById('bookDriverName').value : 'Valued Driver';
             var plate = document.getElementById('bookPlate') ? document.getElementById('bookPlate').value.toUpperCase() : 'TN 38 AB 1234';
             var bay = document.getElementById('bookBayInput') ? document.getElementById('bookBayInput').value : 'Bay A-03';
-            var total = document.getElementById('summaryTotalCost') ? document.getElementById('summaryTotalCost').innerText : '$7.00';
+            var total = document.getElementById('summaryTotalCost') ? document.getElementById('summaryTotalCost').innerText : '₹80';
             var timeIn = document.getElementById('bookTimeIn') ? document.getElementById('bookTimeIn').value : '10:00';
             var dateIn = document.getElementById('bookDateIn') ? document.getElementById('bookDateIn').value : new Date().toISOString().split('T')[0];
 
